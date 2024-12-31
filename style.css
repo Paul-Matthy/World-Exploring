@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color--1: white;
+    --color-2: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.max-wid{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.firstPage{
+    background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.293), rgba(0, 0, 0, 0.266), rgba(0, 0, 0, 0.379), rgba(0, 0, 0, 0.379)), url(./images/catching-the-sun-at-sunset-4k-u7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    display: flex;
+    padding: 2.6rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    font-size: .9rem;
+}
+
+nav i.bx-home-alt-2{
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.search{
+    position: relative;
+    background: white;
+    padding: .5rem;
+    border-radius: .7rem;
+    width: 10%;
+}
+
+.search input{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: .8rem;
+    margin-left: 1.2rem;
+    width: 80%;
+}
+
+.search input::placeholder{
+    margin-left: .5rem;
+}
+
+.search i{
+    color: black;
+    position: absolute;
+    font-size: 1.2rem;
+    left: 4%;
+    top: 25%;
+}
+
+.hero-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    gap: 6rem;
+}
+
+.desc{
+    text-align: center;
+}
+
+
+.desc h1{
+    font-size: 6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+}
+
+.desc p{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: rgb(158, 157, 157);
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.hero-sec i{
+    font-size: 4rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding-left: .08em;
+    margin-bottom: 3em;
+    cursor: pointer;
+}
+
+.second-sec{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.explore{
+    width: 40%;
+    margin: 0 auto;
+    padding: 7em 0 1rem 0;
+    text-align: center;
+}
+
+.explore h2{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: .8em;
+    font-weight: 200;
+}
+
+.explore p{
+    letter-spacing: .5px;
+    color: rgb(160, 160, 160);
+    font-size: .95rem;
+    margin-bottom: 4rem;
+    font-weight: 100;
+    font-size: .9rem;
+}
+
+.explore-img{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    grid-gap: 1.5rem;
+    height: 50vh;
+    padding: 0 2em;
+    transition: 1s;
+}
+
+
+.exploring1{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.428), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.053), rgba(0, 0, 0, 0.053)), url(./images/glowing-rocks-mountains-5k-24.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.exploring2{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.497), rgba(0, 0, 0, 0.284), rgba(0, 0, 0, 0.053), rgba(0, 0, 0, 0.053), rgba(0, 0, 0, 0.053)), url(./images/man-galaxy-universe-space-flashlight-cosmic-night-5k-cz.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.exploring3{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.532), rgba(0, 0, 0, 0.279), rgba(0, 0, 0, 0.053), rgba(0, 0, 0, 0.053), rgba(0, 0, 0, 0.053)), url(./images/mountains-cliff-covered-under-fog-mist-5k-cy.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.world{
+    border-radius: .4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .6rem;
+}
+
+.world h3{
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: .9px;
+}
+
+.world p{
+    margin-bottom: 2.5em;
+    letter-spacing: 1px;
+    color: rgb(163, 163, 163);
+    font-weight: 300;
+}
+
+.blue{
+    position: absolute;
+    background: rgb(0, 153, 255);
+    right: 0;
+    top: 70%;
+    width: 18em;
+    height: 18em;
+    border-radius: 50%;
+    filter: blur(16em);
+    z-index: -999;
+}
+
+.third-sec{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.journal{
+    width: 40%;
+    margin: 0 auto;
+    padding: 7em 0 1rem 0;
+    text-align: center;
+}
+
+.journal h2{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: .7em;
+    font-weight: 200;
+}
+
+.journal p{
+    letter-spacing: .5px;
+    color: rgb(160, 160, 160);
+    font-size: .9rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+
+}
+
+.adventures{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+
+.adventures img{
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: .3em;
+}
+
+.adventure-1, .adventure-2{
+    width: 48.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.adventure-infos{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.adventure-infos p{
+    color: rgb(170, 170, 170);
+    font-weight: 100;
+    font-size: .9rem;
+}
+
+.adventure-infos h2{
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: antiquewhite;
+}
+
+.blue-2{
+    position: absolute;
+    background: rgb(0, 153, 255);
+    left: 0;
+    top: 70%;
+    width: 14em;
+    height: 14em;
+    border-radius: 50%;
+    filter: blur(14em);
+    z-index: -999;
+}
+
+.fourthPage{
+    position: relative;
+}
+
+
+
+.max{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.travel{
+    width: 85%;
+    height: 70%;
+    background: url(./images/subaru-wrx-sti-need-for-speed-heat-5k-c2.jpg);
+    background-size: cover;
+    background-position: 35%;
+    border-radius: .6rem;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.travel-info{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    -webkit-backdrop-filter: grayscale() blur(1rem);
+    backdrop-filter: grayscale() blur(1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.travel-info h1{
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: rgb(255, 242, 225);
+    font-weight: 300;
+}
+
+.travel-info span{
+    color: #009dff;
+}
+
+.travel-info p{
+    width: 80%;
+    margin: 0 auto 4em auto;
+    color: rgb(228, 214, 196);
+    letter-spacing: 1px;
+    line-height: 2rem;
+    font-size: .9rem;
+}
+
+.info{
+    position: absolute;
+    width: 25%;
+    height: 30%;
+    background: #009dff;
+    color: black;
+    right: 6%;
+    bottom: 6%;
+    border-radius: .2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info h1{
+    margin: 1.9rem 0 1rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.info p{
+    width: 90%;
+    letter-spacing: .6px;
+    line-height: 1.5rem;
+    font-size: .8rem;
+}
+
+.lastPage{
+    height: 4vh;
+}
+
+.lastPage-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 42%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.copyrights{
+    display: flex;
+    align-items: center;
+}
+
+.copyrights p{
+    font-size: .9rem;
+}
+
+.navigations{
+    display: flex;
+    align-items: center;
+    gap: 1.4em;
+}
+
+.navigations a{
+    color: white;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+.line {
+    position: absolute;
+    background: white;
+    width: 1.5px;
+    height: 1rem;
+    left: 53.2%;
+}
+
+.visible, .invisible{
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity .5s, transform .5s;
+}
+
+.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
